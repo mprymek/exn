@@ -10,9 +10,9 @@ defimpl Exn.Encoder, for: [Atom, List, Number, BitString, Regex] do
   def encode(term), do: inspect(term)
 end
 
-defimpl Exn.Encoder, for: Range do
-  def encode(Range[first: f, last: l]), do: "#{f}..#{l}"
-end
+#defimpl Exn.Encoder, for: Range do
+#  def encode(Range[first: f, last: l]), do: "#{f}..#{l}"
+#end
 
 defimpl Exn.Encoder, for: Tuple do
   def encode(term) do
